@@ -1,0 +1,351 @@
+/* Styles spécifiques pour le formulaire de modification d'offre d'emploi */
+.update-job-offer-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.update-job-offer-container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.update-job-offer-container h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.update-job-offer-container h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4a90e2, #357abd);
+    border-radius: 2px;
+}
+
+.update-job-offer-container .job-offer-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.update-job-offer-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    position: relative;
+}
+
+.update-job-offer-container .form-group label {
+    font-weight: 600;
+    color: #34495e;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.update-job-offer-container .form-group label:after {
+    content: '*';
+    color: #e74c3c;
+    margin-left: 0.2rem;
+}
+
+.update-job-offer-container .form-group input,
+.update-job-offer-container .form-group select,
+.update-job-offer-container .form-group textarea {
+    padding: 0.9rem 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.update-job-offer-container .form-group input:focus,
+.update-job-offer-container .form-group select:focus,
+.update-job-offer-container .form-group textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    background-color: #ffffff;
+}
+
+.update-job-offer-container .form-group input:hover,
+.update-job-offer-container .form-group select:hover,
+.update-job-offer-container .form-group textarea:hover {
+    border-color: #bdc3c7;
+}
+
+.update-job-offer-container .form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.update-job-offer-container .form-group input[type="file"] {
+    padding: 0.8rem;
+    border: 2px dashed #cbd5e0;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 40px;
+}
+
+.update-job-offer-container .form-group input[type="file"]:hover {
+    border-color: #4a90e2;
+    background-color: #edf2f7;
+}
+
+.update-job-offer-container .form-group input[type="file"]::before {
+    content: 'Choisir un fichier';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #64748b;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.update-job-offer-container .form-group input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0;
+}
+
+.update-job-offer-container .form-group input[type="file"]:hover::before {
+    color: #4a90e2;
+}
+
+/* Suppression du style pour le texte "No file chosen" */
+.update-job-offer-container .form-group input[type="file"]::after {
+    display: none;
+}
+
+.update-job-offer-container .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+.update-job-offer-container .form-group select:focus {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234a90e2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.update-job-offer-container .form-group .help-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-top: 0.3rem;
+    font-style: italic;
+}
+
+.update-job-offer-container .current-logo {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.update-job-offer-container .logo-preview {
+    max-width: 120px;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-job-offer-container .form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+}
+
+.update-job-offer-container .submit-button {
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+    min-width: 60px;
+    max-width: 100px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.update-job-offer-container .submit-button:hover {
+    background: linear-gradient(135deg, #357abd, #2a5f94);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(74, 144, 226, 0.3);
+}
+
+.update-job-offer-container .submit-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.2);
+}
+
+.update-job-offer-container .submit-button:disabled {
+    background: #cbd5e0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.update-job-offer-container .submit-button:before {
+    content: '✓';
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.update-job-offer-container .error-message {
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #dc2626;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    grid-column: 1 / -1;
+}
+
+.update-job-offer-container .error-message:before {
+    content: '⚠️';
+    font-size: 1.2rem;
+}
+
+.update-job-offer-container .success-message {
+    background-color: #dcfce7;
+    color: #16a34a;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #16a34a;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    grid-column: 1 / -1;
+}
+
+.update-job-offer-container .success-message:before {
+    content: '✅';
+    font-size: 1.2rem;
+}
+
+.update-job-offer-container .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+    grid-column: 1 / -1;
+}
+
+.update-job-offer-container .loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #4a90e2;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.update-job-offer-container .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+.update-job-offer-container .back-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #64748b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.update-job-offer-container .back-button:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .update-job-offer-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .update-job-offer-container .job-offer-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .update-job-offer-container .form-group input,
+    .update-job-offer-container .form-group select,
+    .update-job-offer-container .form-group textarea {
+        font-size: 16px; /* Prevents zoom on mobile */
+    }
+    
+    .update-job-offer-container .form-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .update-job-offer-container .submit-button {
+        width: auto;
+        max-width: 120px;
+    }
+} 
